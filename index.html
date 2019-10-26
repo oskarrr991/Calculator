@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Calculator by Oskar</title>
+</head>
+<body>
+    <div class="main">
+        <p id="logo">Welcome to my calculator!</p>
+        <input type="text" id="rez"/>
+        <br>
+        <input type="button" value="1" onclick="setValues(1)"/>
+        <input type="button" value="2" onclick="setValues(2)"/>
+        <input type="button" value="3" onclick="setValues(3)"/>
+        <input type="button" value="+" id="op" onclick="operations('+')"/>
+        <br>
+        <input type="button" value="4" onclick="setValues(4)"/>
+        <input type="button" value="5" onclick="setValues(5)"/>
+        <input type="button" value="6" onclick="setValues(6)"/>
+        <input type="button" value="-" id="op" onclick="operations('-')"/>
+        <br>
+        <input type="button" value="7" onclick="setValues(7)"/>
+        <input type="button" value="8" onclick="setValues(8)"/>
+        <input type="button" value="9" onclick="setValues(9)"/>
+        <input type="button" value="X" id="op" onclick="operations('*')"/>
+        <br>
+        <input type="button" value="C" onclick="calculator.rez.value = ''"/>
+        <input type="button" value="0" onclick="zero()"/>
+        <input type="button" value="=" onclick="isEqual()"/>
+        <input type="button" value="/" id="op" onclick="operations('/')"/>
+        <br>
+        <input type="button" value="." onclick="calculator.rez.value += '.'"/>
+        <input type="button" value="^" onclick="operations('^')"/>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
