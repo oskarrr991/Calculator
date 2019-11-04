@@ -1,29 +1,30 @@
+result = document.getElementById('rez');
 function setValues(num) {
-    calculator.rez.value += (num + '');
+    result.value += (num + '');
 }
 
 function operations(oper) {
-    var last = calculator.rez.value[calculator.rez.value.length - 1];
+    var last = result.value[result.length - 1];
 
     if (last == '^' || last == '+' || last == '-' || last == '*' || last == '/') 
         return;
     else 
-        calculator.rez.value += oper;
+    result.value += oper;
 }
 
 function isEqual() {
-    if (calculator.rez.value[calculator.rez.value.length - 2] !== '^') 
-        calculator.rez.value = eval(calculator.rez.value);
+    if (result.value[result.value.length - 2] !== '^') 
+    result.value = eval(result.value);
     else 
-        calculator.rez.value = Math.pow(calculator.rez.value[0], calculator.rez.value[calculator.rez.value.length - 1]);
+        cresult.value = Math.pow(result.value[0], result.value[result.value.length - 1]);
 }
 function zero()
 {
-    var first = calculator.rez.value[0];
+    var first = result.value[0];
 
     if(first == '0') {
         return;
     }
     else
-        calculator.rez.value += '0';
+    result.value += '0';
 }
